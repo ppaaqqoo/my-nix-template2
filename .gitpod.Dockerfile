@@ -1,3 +1,3 @@
 FROM gitpod/workspace-base
 
-CMD sh <(curl -L https://nixos.org/nix/install) --daemon
+RUN curl -L https://nixos.org/nix/install | sh
