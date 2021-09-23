@@ -16,5 +16,22 @@ CMD /bin/bash -l
 USER gitpod
 ENV USER gitpod
 WORKDIR /home/gitpod
-RUN touch .bash_profile \
- && curl -L http://nixos.org/nix/install | sh
+RUN touch .bash_profile && \
+    curl --silent -L https://nixos.org/nix/install | sh
+
+# In docker each RUN command runs on it's owun subprocess so the environmente variables set by
+# . ~/.nix-profile/etc/profile.d/nix.sh need to be set on each RUN command like this:
+#  RUN . ~/.bash_profile && nix-env -iA nixpkgs.jq
+# OR we can set the variables using docker ENV
+
+ENV USER=gitpod
+ENV HOME=/home/gitpod
+ENV NIX_LINK=$HOME/.nix-profile
+ENV NIX_PATH=${NIX_PATH:+$NIX_PATH:}$HOME/.nix-defexpr/channels
+ENV NIX_PROFILES="/nix/var/nix/profiles/default $HOME/.nix-profile"
+# ENV _NIX_DEF_LINK=/nix/var/nix/profiles/default
+ENV NIX_SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+ENV MANPATH=$NIX_LINK/share/man:$MANPATH
+ENV PATH=$NIX_LINK/bin:$PATH
+
+RUN nix-env -iA nixpkgs.jq
