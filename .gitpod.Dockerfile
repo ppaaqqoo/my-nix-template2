@@ -2,6 +2,7 @@ FROM gitpod/workspace-base
 
 USER root
 # Install Nix
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl
 RUN addgroup --system nixbld \
   && adduser gitpod nixbld \
   && for i in $(seq 1 3); do useradd -ms /bin/bash nixbld$i &&  adduser nixbld$i nixbld; done \
