@@ -22,16 +22,16 @@ Open another terminal (plutus/plutus-playground-server), and in the same directo
 
 We will need to install [Gitpod Local Companion](https://www.gitpod.io/blog/local-app) if we want to open the Plutus Playground in our localhost.
 
-    ## Gitpod Local Companion Installation
+## Gitpod Local Companion Installation
 
-    #### mac
-    - `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-darwin`
-    - `chmod +x ./gitpod-local-companion-*`
+#### mac
+- `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-darwin`
+- `chmod +x ./gitpod-local-companion-*`
 
-    #### linux
-    - `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-linux`
-    - `chmod +x ./gitpod-local-companion-*`
+#### linux
+- `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-linux`
+- `chmod +x ./gitpod-local-companion-*`
 
-    ## Running Gitpod Local Companion
+## Running Gitpod Local Companion
 
-    - `./gitpod-local-companion-[darwin|linux`
+- `./gitpod-local-companion-[darwin|linux`
