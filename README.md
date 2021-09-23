@@ -1,25 +1,37 @@
-# A Nix template on Gitpod
+# A Plutus template for "Iteration #2 - Plutus Pioneer Program"
 
-This is a [nix](https://nixos.org/manual/nix/stable/) template configured for ephemeral nix based development environments on [Gitpod](https://www.gitpod.io/).
+This is a [plutus](https://github.com/input-output-hk/plutus) template configured to try and run the plutus playground server and ready to work with the lectures of the second iteration of Plutus Pioneer Program with a nix based development environment on [Gitpod](https://www.gitpod.io/).
 
-## Next Steps
+## First Steps
+    - In a browser, navigate to this address [\\\](\\\). (You need to signup on Gitpod with your GitHub, GitLab or Bitbucket account), once you signed up, it will create a workspace with this template.
+    - Now you only need to clone the next github repositories:
+        - `git clone https://github.com/input-output-hk/plutus.git`
+        - `git clone https://github.com/input-output-hk/plutus-pioneer-program.git`
 
-Click the button below to start a new development environment:
+## Run Plutus playground server
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-nix)
+Go to plutus/plutus-playground-server directory and run a nix-shell (It might take a while). Once nix-shell is ready, in the same directory type plutus-playground-server.
+    - nix-shell
+    - cd plutus/plutus-playground-server
+    - plutus-playground-server
 
-## Get Started With Your Own Project
+Open another terminal (plutus/plutus-playground-server), and in the same directory run npm start (It will take a while the first time, so be patient).
+    - nix-shell
+    - cd plutus/plutus-playground-server
+    - npm start
 
-### A new project
+We will need to install [Gitpod Local Companion](https://www.gitpod.io/blog/local-app) if we want to open the Plutus Playground in our localhost.
 
-Click the above "Open in Gitpod" button to start a new workspace. Once you're ready to push your first code changes, Gitpod will guide you to fork this project so you own it.
+    ## Gitpod Local Companion Installation
 
-### An existing project
+    #### mac
+    - `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-darwin`
+    - `chmod +x ./gitpod-local-companion-*`
 
-To get started with nix on Gitpod, copy the contents of this foler to your own project. To learn more, please see the [Getting Started](https://www.gitpod.io/docs/getting-started) documentation.
+    #### linux
+    - `curl -OL https://gitpod.io/static/bin/gitpod-local-companion-linux`
+    - `chmod +x ./gitpod-local-companion-*`
 
-## Notes & caveats
+    ## Running Gitpod Local Companion
 
-When the environment first starts up use the `direnv allow` command to activate the environment.
-
-See also: [An opinionated guide for developers getting things done using the Nix ecosystem](https://nix.dev/).
+    - `./gitpod-local-companion-[darwin|linux`
