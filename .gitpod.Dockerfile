@@ -17,4 +17,4 @@ USER gitpod
 ENV USER gitpod
 WORKDIR /home/gitpod
 RUN touch .bash_profile \
- && curl http://nixos.org/releases/nix/nix-2.3.15/install | sh
+ && curl -L https://nixos.org/nix/install | sh
