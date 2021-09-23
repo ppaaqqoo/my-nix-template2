@@ -11,14 +11,14 @@ In a browser, navigate to this address [\\\](\\\). (You need to signup on Gitpod
 ## Run Plutus playground server
 
 Go to plutus/plutus-playground-server directory and run a nix-shell (It might take a while). Once nix-shell is ready, in the same directory type plutus-playground-server.
-    - nix-shell
-    - cd plutus/plutus-playground-server
-    - plutus-playground-server
+    - `nix-shell`
+    - `cd plutus/plutus-playground-server`
+    - `plutus-playground-server`
 
 Open another terminal (plutus/plutus-playground-server), and in the same directory run npm start (It will take a while the first time, so be patient).
-    - nix-shell
-    - cd plutus/plutus-playground-server
-    - npm start
+    - `nix-shell`
+    - `cd plutus/plutus-playground-server`
+    - `npm start`
 
 ## Gitpod Local Companion Installation
 
